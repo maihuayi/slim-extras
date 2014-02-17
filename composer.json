@@ -2,7 +2,6 @@
 	"name": "slim/extras",
 	"type": "library",
 	"description": "Extras for Slim Framework",
-	"homepage": "http://github.com/tehnorm/slim-extras",
 	"license": "MIT",
 	"authors": [
 		{
@@ -14,6 +13,5 @@
 	},
 	"autoload": {
 		"psr-0": { "Slim\\Extras": "." }
-	},
-	"target-dir": "Slim/Extras"
+	}
 }
