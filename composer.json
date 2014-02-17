@@ -13,5 +13,6 @@
 	},
 	"autoload": {
 		"psr-0": { "Slim\\Extras": "." }
-	}
+	},
+	"target-dir": "Slim/Extras"
 }
