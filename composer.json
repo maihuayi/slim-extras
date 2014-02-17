@@ -1,0 +1,20 @@
+{
+	"name": "slim/extras",
+	"type": "library",
+	"description": "Extras for Slim Framework",
+	"homepage": "http://github.com/tehnorm/slim-extras",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Norm Santos",
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"slim/slim": "2.*"
+	},
+	"autoload": {
+		"psr-0": { "Slim\\Extras": "." }
+	},
+	"target-dir": "Slim/Extras"
+}
