@@ -11,14 +11,18 @@ class LayoutView extends \Slim\View
 		$this->layout = $layout;
 	}
 
-	public function render($template, $data=null)
-	{
-		if ($this->layout){
-			$content =  parent::render($template, $data);
-			$this->setData(array('content_for_layout' => $content));
-			return parent::render($this->layout, $data);
-		} else {
-			return parent::render($template, $data);
-		}
-	}
+        public function render($template, $data=array())
+        {
+                if ($this->layout){
+                        if(!empty($data) && is_array($data)){
+                                $data = array_merge($this->all(), $data);
+                        }
+
+                        $content =  parent::render($template, $data);
+                        $this->appendData(array('content_for_layout' => $content));
+                        return parent::render($this->layout, $data);
+                } else {
+                        return parent::render($template, $data);
+                }
+        }
 }
